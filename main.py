@@ -35,6 +35,8 @@ def research_file():  # 1. 작업 공간에 있는 파일들을 반복문으로 
         file_e = extraction(file)
         if file_e == '':  continue  # 문제 번호가 안적힌 파이썬 파일은 제외
         classify_list = crawling.crawling(file_e)  # 2. 크롤링으로 알고리즘 분류 정보 받아오기
+        if file.index("nr") != -1: # 복습이 필요한 파일일 경우
+            classify_list.append("need_review")
         classification(file, classify_list)
         os.remove(file)
 

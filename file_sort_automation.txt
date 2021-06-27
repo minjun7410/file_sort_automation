@@ -1,8 +1,8 @@
 CAPCHA 보안 때문에 열려있는 크롬 창에서 파이썬 파일을 실행해야 한다.
 
- 0. 모든 파일을 타겟 디렉토리에 저장
-
- 1. cmd 창에서 C:\Program Files\Google\Chrome\Application\ 디렉토리로 이동 후
+ 0. 모든 파일을 타겟 디렉토리에 저장,
+    복습이 필요한 파일의 이름은 nr을 포함.
+ 1. cmd 창에서 C:\Program Files\Google\Chrome\Application\ (chrome.exe 가 있는)디렉토리로 이동 후
  2. chrome.exe --remote-debugging-port=9222 --user-data-dir="C:/ChromeTEMP"
  (9222 포트로 크롬을 디버깅 모드로 실행한다는 뜻.  위의 구문은 temp파일을 C:/ChromeTEMP 디렉토리를 만들어서 보관하는 것.
  * 크롬 창이 뜨면 닫지 않고 기달린다. (9222 포트가 열려있는지 확인 : netstat -ano | findstr 9222)
